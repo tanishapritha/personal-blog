@@ -3,12 +3,113 @@
     "name": "personal-blog",
     "repo_url": "https://github.com/tanishapritha/personal-blog"
   },
-  "structure": "monorepo",
-  "apps": [
-    "api",
-    "web"
+  "features": [
+    {
+      "name": "User Authentication",
+      "status": "planned"
+    },
+    {
+      "name": "Habit Tracker",
+      "status": "planned"
+    },
+    {
+      "name": "Goal Setting",
+      "status": "planned"
+    },
+    {
+      "name": "Learning Log",
+      "status": "planned"
+    },
+    {
+      "name": "Analytics Dashboard",
+      "status": "planned"
+    }
   ],
-  "database": [],
-  "endpoints": [],
-  "features": []
+  "database": [
+    {
+      "table": "users",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "username",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "table": "habits",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        },
+        {
+          "name": "habit_name",
+          "type": "string"
+        },
+        {
+          "name": "frequency",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "table": "goals",
+      "fields": [
+        {
+          "name": "id",
+          "type": "integer"
+        },
+        {
+          "name": "user_id",
+          "type": "integer"
+        },
+        {
+          "name": "goal_name",
+          "type": "string"
+        },
+        {
+          "name": "target_date",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "endpoints": [
+    {
+      "method": "GET",
+      "route": "/user-authentication"
+    },
+    {
+      "method": "GET",
+      "route": "/habit-tracker"
+    },
+    {
+      "method": "GET",
+      "route": "/goal-setting"
+    },
+    {
+      "method": "GET",
+      "route": "/learning-log"
+    },
+    {
+      "method": "GET",
+      "route": "/analytics-dashboard"
+    }
+  ]
 }
