@@ -1,0 +1,14 @@
+{
+  "project": {
+    "name": "personal-blog",
+    "repo_url": "https://github.com/tanishapritha/personal-blog"
+  },
+  "structure": "monorepo",
+  "apps": [
+    "api",
+    "web"
+  ],
+  "database": [],
+  "endpoints": [],
+  "features": []
+}
